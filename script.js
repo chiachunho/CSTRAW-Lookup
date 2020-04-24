@@ -11,14 +11,20 @@ $(document).ready(function () {
     // searchBtn click event
     $("#searchBtn").on('click', function () {
         var id = $("#idInput").val();
-//        console.log(id);
+        //        console.log(id);
+        $("#status").show();
         $("#success").hide();
         $("#secondary").hide();
         $("#refused").hide();
-        $("#notfound").hide();
         $("#error").hide();
-        $("#loading").fadeIn();
-        search(id);
+        if (id == "") {
+            $("#notfound").fadeIn();
+            $("#loading").hide();
+        } else {
+            $("#notfound").hide();
+            $("#loading").fadeIn();
+            search(id);
+        }
     });
 
 });

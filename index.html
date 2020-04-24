@@ -17,57 +17,68 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="card my-3">
+                    <img class="card-img-top" src="APP%20Banner-01.png" alt="Banner">
                     <div class="card-body">
-                        <div class="card-title mx-md-5 my-md-4 p-4 border rounded" style="display: block">
-                            <h2 class="text-center">— 吸吸管 —</h2>
-                            <h3 class="text-center">出貨進度查詢系統</h3>
+                        <div class="card-title">
+                            <h2 class="text-center my-4">吸吸管<span style="font-weight: 400">｜出貨進度查詢系統</span></h2>
                         </div>
-                        <p class="card-text px-md-5 px-2">
-                            <strong>如何使用</strong> —— 吸吸管出貨進度查詢系統<br>
-                        </p>
-                        <ui class="my-2">
-                            <li class="px-md-5 px-2">登入嘖嘖募資平台會員。</li>
-                            <li class="px-md-5 px-2">點選右上會員頭像 >> <a href="https://www.zeczec.com/account" target="_blank">贊助紀錄</a>。</li>
-                            <li class="px-md-5 px-2 ">找到贊助編號欄位，點選<i class="material-icons px-1 align-text-top" style="font-size: 1rem;">content_copy</i>直接完成複製。</li>
-                            <li class="px-md-5 px-2">將贊助編號貼到下方查詢欄位，按下確認即顯示您的出貨進度。</li>
-                        </ui>
-                        <div class="d-flex justify-content-center py-3">
-                            <a class="btn btn-primary btn-sm" href="https://m.me/aplasticproject" role="button" target="_blank">聯繫客服</a>
-                        </div>
-                        <div class="form-group px-md-5 px-2">
-                            <label for="idInput">請輸入<strong>贊助編號</strong>（開頭為 <u>P4042</u> ）</label>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" id="idInput" placeholder="P4042" aria-label="" aria-describedby="searchBtn">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="searchBtn">確認</button>
+                        <div class="mx-md-5 mx-2">
+                            <div class="form-group my-4">
+                                <label for="idInput">請輸入<strong>贊助編號</strong>（開頭為 <u>P4042</u> ）</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="idInput" placeholder="P4042" aria-label="" aria-describedby="searchBtn">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="searchBtn">確認</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div id="status" class="my-4" style="display:none;">
+                                <div id="status_header">
+                                    訂單狀態
+                                </div>
+                                <div id="loading" class="alert alert-secondary my-2 align-items-center" role="alert" style="display:none;">
+                                    <div class="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></div>
+                                    <strong>讀取中請稍等！...</strong>
+                                </div>
+                                <div id="secondary" class="alert alert-secondary my-2" role="alert" style="display:none;">
+                                    <strong><span class="status"></span></strong>。
+                                </div>
+                                <div id="success" class="alert alert-success my-2" role="alert" style="display:none;">
+                                    <strong><span class="status"></span></strong>。
+                                </div>
+                                <div id="refused" class="alert alert-danger my-2" role="alert" style="display:none;">
+                                    <strong><span class="status">您的商品遭拒退，請聯繫客服</span>。</strong>
+                                </div>
+                                <div id="notfound" class="alert alert-danger my-2" role="alert" style="display:none;">
+                                    <span class="status"><strong>輸入錯誤，請重新確認您的贊助編號！</strong><br>
+                                        <div class="small">（提示：建議直接複製貼上嘖嘖頁面顯示之贊助編號，避免手動輸入數字／字母混淆唷！）</div>
+                                    </span>
+                                </div>
+                                <div id="error" class="alert alert-danger my-2 " role="alert" style="display:none;">
+                                    <span class="status"><strong>系統目前有點小問題，請再試一次或聯繫客服。</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <div id="guide" class="mx-md-5 mx-2" style="font-size: 0.9rem;">
+                                <p class="card-text">
+                                    <strong>如何使用</strong>
+                                </p>
+                                <ui class="my-2">
+                                    <li><a href="https://www.zeczec.com/account" target="_blank">登入嘖嘖募資平台會員</a>。</li>
+                                    <li>點選右上會員頭像 >> 贊助紀錄。</li>
+                                    <li>找到贊助編號欄位，點選<i class="material-icons px-1 align-text-top" style="font-size: 1rem;">content_copy</i>直接完成複製。</li>
+                                    <li>將贊助編號貼到查詢欄位，按下確認即顯示您的出貨進度。</li>
+                                </ui>
+                                <div class="d-flex justify-content-center py-3">
+                                    <a class="btn btn-primary btn-sm" href="https://m.me/aplasticproject" role="button" target="_blank">聯繫客服</a>
+                                </div>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
-                <div id="loading" class="alert alert-secondary my-2 align-items-center" role="alert" style="display:none;">
-                    <div class="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></div>
-                    <strong>讀取中請稍等！...</strong>
-                </div>
-                <div id="secondary" class="alert alert-secondary my-2" role="alert" style="display:none;">
-                    您的贊助編號「<span class="id">xxxxxxxxxxxxxx</span>」<strong><span class="status"></span></strong>。
-                </div>
-                <div id="success" class="alert alert-success my-2" role="alert" style="display:none;">
-                    您的贊助編號「<span class="id">xxxxxxxxxxxxxx</span>」<strong><span class="status"></span></strong>。
-                </div>
-                <div id="refused" class="alert alert-danger my-2" role="alert" style="display:none;">
-                    <strong><span class="status">您的商品遭拒退，請聯繫客服</span>。</strong>
-                </div>
-                <div id="notfound" class="alert alert-danger my-2" role="alert" style="display:none;">
-                    <span class="status"><strong>輸入錯誤，請重新確認您的贊助編號！</strong><br>
-                        <div class="small">（提示：建議直接複製貼上嘖嘖頁面顯示之贊助編號，避免手動輸入數字／字母混淆唷！）</div>
-                    </span>
-                </div>
-                <div id="error" class="alert alert-danger my-2" role="alert" style="display:none;">
-                    <span class="status"><strong>系統目前有點小問題，請再試一次或聯繫客服。</strong>
-                    </span>
-                </div>
+
             </div>
         </div>
 
